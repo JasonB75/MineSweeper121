@@ -142,11 +142,12 @@ public class MineSweeper {
     }
 
     public void endGame() {
-        System.out.println("Ya motha fuucka, you hit a god damn mine. what deee fuck?!?");
-        Font tr = new Font("TimesRoman", Font.PLAIN, 18);
-        Settings sets = new Settings(tr, 50, 50);
+        //System.out.println("Ya motha fuucka, you hit a god damn mine. what deee fuck?!?");
+        Font tr = new Font("TimesRoman", Font.PLAIN, 65);
+        Settings sets = new Settings(tr, 160, 60);
         AsciiArt art = new AsciiArt();
         art.drawString("FAIL", "YOU FAILED", sets );
+        System.out.println("'Did you ever hear the tragedy of Darth Minesweepius the wise? I thought not. It's not a story the python coders would tell you. \n It's a Java legend. Darth Minesweepius was a Dark Lord of the Java, so powerful and so wise he could use the Code to influence the strings to create ASCII art... \n He had such a knowledge of the dark side that he could even keep the programs he cared about from erroring. \nThe dark side of the Code is a pathway to many abilities some consider to be unnatural. He became so powerful... \n the only thing he was afraid of was losing his Code , which eventually, of course, he did. Unfortunately, he taught his apprentice everything he knew,\n then his apprentice Null Pointer Exceptioned him in his sleep. It's ironic he could save others from errors, but not himself.' ");
        //forky();
         TalkAboutIt.stopGame = true;
     }
@@ -165,7 +166,7 @@ public class MineSweeper {
         while (a)
 
             art.drawString("FAIL", "YOU FAILED", sets );
-        System.out.println("Ya motha fuucka, you hit a god damn mine. what deee fuck?!?");
+
          forky();
           forky();
          forky();

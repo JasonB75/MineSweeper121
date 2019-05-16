@@ -13,7 +13,7 @@ public class AsciiArt {
         BufferedImage image = getImageIntegerMode(settings.width, settings.height);
 
         Graphics2D graphics2D = getGraphics2D(image.getGraphics(), settings);
-        graphics2D.drawString(text, 6, ((int) (settings.height * 0.67)));
+        graphics2D.drawString(text, 16, ((int) (settings.height * 0.90)));
 
         for (int y = 0; y < settings.height; y++) {
             StringBuilder stringBuilder = new StringBuilder();

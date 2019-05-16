@@ -61,8 +61,8 @@ public class TalkAboutIt
             else if(statement.trim().equals("m") || statement.trim().equals("M"))
             {
                 counter = counter + 1;
-                int row = 10;
-                int column = 10;
+                 row = 10;
+                 column = 10;
                 round = new MineSweeper(row, column, 8);
                 round.start(row,column);
                 round.printBoard();
@@ -73,8 +73,8 @@ public class TalkAboutIt
             else if(statement.trim().equals("h") || statement.trim().equals("H"))
             {
                 counter = counter + 1;
-                int row = 15;
-                int column = 15;
+                 row = 15;
+                 column = 15;
                 round = new MineSweeper(row, column, 16);
                 round.start(row,column);
                 round.printBoard();
@@ -129,17 +129,21 @@ public class TalkAboutIt
                         int yeet = bois.indexOf(values[0]);
                         round.enterCord(yeet, result, row, column);
                         //round.printBoard();
+                        if (!round.gameOver)
+                        {
 
-                        //round.printGame();
-                        return "Round " + (counter - 1) + "! Enter your next cordinates (Letter,Number)";
+                        return "Round " + (counter - 1) + "! Enter your next cordinates (Letter,Number)";}
                     }
                 }
                 else
                 {
-                    return "Please enter your cordinates correctly";
+                    if (!round.gameOver)
+                    {return "Please enter your cordinates correctly";}
                 }
             }
         }
-        return "Please enter your cordinates correctly";
+            if (!round.gameOver)
+            {return "Please enter your cordinates correctly";}
+            else return " ";
     }
 }
